@@ -6,7 +6,7 @@
     <title>Matrix Calculator</title>
     <link rel="icon" type="image/png" href="images/matrix_svg.png">
     <link rel="stylesheet" href="css/cssReset.css">
-    <link href="http://fonts.cdnfonts.com/css/true-lies" rel="stylesheet">
+<!--    <link href="http://fonts.cdnfonts.com/css/true-lies" rel="stylesheet">-->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
@@ -16,9 +16,32 @@
 <form name="dimension-form">
     <fieldset>
         <legend>&nbsp;Matrix Dimension&nbsp;</legend>
-        <input class="user_input" type="number" name="dimension" min="1" required>
-        <button id="submit">Set Matrix</button>
+        <input type="number" class="user_input"  name="dimension" min="1" max="50" required>
+        <button id="setMatrixBtn">Set Matrix</button>
     </fieldset>
 </form>
+<section id="output">
+    <h1 class="title">The left to right diagonal: <span id="ltrd"></span></h1>
+    <h1 class="title">The right to left diagonal: <span id="rtld"></span></h1>
+    <h1 class="title">Their absolute difference: <span id="absDiff"></span></h1>
+</section>
+<div id="wrapper"></div>
+<div id="window">
+    <h1 id="windowHeader">Matrix Input</h1>
+    <div id="windowClose">x</div>
+    <div id="windowContent">
+        <form name="matrix">
+            <div id="matrixInput"></div>
+            <div id="fnBtnsSet">
+                <input class="fnBtns" type="reset" name="resetBtn" value="Clear">
+                <input type="button" value="Fill empty cells with zero" class="fnBtns" id="fillBtn">
+                <div id="submitBtnContainer">
+                    <input type="submit" name="matrixSubmit" value="Calculate" class="fnBtns">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>

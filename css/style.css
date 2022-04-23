@@ -1,3 +1,15 @@
+/*Remove Arrows/Spinners*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
 /************************************** DESKTOP VIEW ****************************************/
 body{
     font-family: arial, serif;
@@ -48,6 +60,117 @@ button:active{
 button:active{
     background-color: darkcyan;
     border-color:black;
+}
+#output{
+    display: none;
+    margin-top: 20px;
+}
+/*matrix input UI*/
+#wrapper{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: #000;
+    opacity: .5;
+    display: none;
+    left: 0;
+    top: 0;
+}
+#window{
+    position: absolute;
+    background-color: #424143;
+    border: 1px solid #FAF9F6;
+    z-index: 99999!important;
+    box-shadow: 0 0 7px #000;
+    border-radius: 5px;
+    display: none;
+    margin-top: 150px;
+    top: 0;
+}
+#windowHeader{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 3px;
+    padding-right: 20px;
+}
+#windowClose{
+    right: 5px;
+    position: absolute;
+    font-size: 10pt;
+    top: 1px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: inset 0 0 3px #000;
+    border-radius: 3px;
+    padding: 0 4px 1px;
+    transition-property: background-color,box-shadow,color;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+#windowContent{
+    padding: 10px 20px;
+}
+#submitBtnContainer{
+    text-align: center;
+}
+.fnBtns{
+    display: inline-block;
+    background-color: #424143;
+    background-image: linear-gradient(180deg,#49484a,#424143);
+    border: 1px solid #333;
+    color: #fff;
+    text-shadow: 0 1px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 12pt;
+    text-align: center;
+    padding: 3px 8px;
+    outline: none;
+    margin: 4px;
+}
+/*matrix table*/
+#matrixInput{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+#table{
+    color: white;
+}
+#table tr td, table tr th {
+    border: 1px solid #b5b5b5;
+    padding: 5px;
+    text-align: center;
+    color: #efefef;
+}
+.subIndex {
+    position: relative;
+    bottom: -4px;
+    font-size: 8pt;
+}
+.rowNumber {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.inputCell {
+    text-align: center;
+    background-color: #fff;
+    width: 40px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    padding: 3px;
+    transition: background-color .3s linear;
+    border-radius: 0;
+}
+.inputCell:focus{
+    background-color: black;
+    color: white;
+}
+.redBg{
+    background-color: #FF8888 !important;
+    color: black !important;
 }
 /************************************** MOBILE VIEW *****************************************/
 @media only screen and (max-width: 600px){
