@@ -15,7 +15,7 @@ body{
     font-family: arial, serif;
     color: white;
     text-align: center;
-    background: url("/images/bg.jpg") no-repeat;
+    background: url("../images/bg.jpg") no-repeat;
     background-size: cover;
 
 }
