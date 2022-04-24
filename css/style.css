@@ -13,8 +13,11 @@ input[type=number] {
 /************************************** DESKTOP VIEW ****************************************/
 body{
     font-family: arial, serif;
-    color: #333;
+    color: white;
     text-align: center;
+    background: url("/images/bg.jpg") no-repeat;
+    background-size: cover;
+
 }
 .main-title{
     font-family: 'True Lies', sans-serif;
@@ -27,6 +30,7 @@ body{
 
 }
 form[name="dimension-form"] fieldset{
+    font-weight: bold;
     width: 500px;
     margin: 20px auto;
     text-align: center;
@@ -41,24 +45,28 @@ form[name="dimension-form"] fieldset{
     border: 3px solid #ccc;
     outline: none !important;
     text-align: center;
+    box-shadow: inset 0 0 3px #000;
+    transition-property: background-color,box-shadow,color;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
 }
 button{
     padding:16px 20px;
+    font-weight: bold;
     display: block;
     margin: 10px auto;
     border-radius: 10px;
-    border: 3px solid black;
+    background-color: #333333;
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
 }
 button:hover{
-    background-color: #ccc;
-    border-color:darkcyan;
+    background-color: #09CE31;
+    color: #333333;
+    border-color: #333333;
 }
 button:active{
     transform:translateY(7px);
-}
-button:active{
-    background-color: darkcyan;
-    border-color:black;
 }
 #output{
     display: none;
@@ -183,6 +191,9 @@ button:active{
     }
     .user_input{
         font-size: 1.5em;
+    }
+    body{
+        background-size: auto;
     }
 
 }
